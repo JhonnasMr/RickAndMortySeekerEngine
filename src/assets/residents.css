@@ -1,0 +1,9 @@
+.resident {
+    width: 100%;
+    max-width: 1024px;
+
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}

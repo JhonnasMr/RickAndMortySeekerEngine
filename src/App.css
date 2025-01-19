@@ -1,0 +1,65 @@
+#root {
+    width: 100vw;
+    background: var(--bg-secondary);
+}
+
+main {
+    width: 100%;
+}
+
+.container-flex {
+    display: flex;
+}
+
+.container-grid {
+    display: grid;
+    place-content: center;
+}
+
+header {
+    width: 100vw;
+    background-color: black;
+    position: relative;
+    .header {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 18vh;
+        overflow: hidden;
+
+        .header-svg {
+            position: absolute;
+            width: 80%;
+            max-width: 1024px;
+            img {
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+        .video__background {
+            width: 100%;
+        }
+    }
+}
+
+
+
+@media (width >= 768px) {
+    .header__poster {
+        min-height: 35vh;
+        background-size: cover;
+        .poster__img {
+            max-width: 1024px;
+            margin-inline: auto;
+        }
+    }
+    header {
+        .header {
+            min-height: 35vh;
+    
+            .header-svg {
+                width: 70%;
+            }
+        }
+    }
+}

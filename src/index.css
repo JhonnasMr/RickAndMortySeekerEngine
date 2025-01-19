@@ -1,0 +1,45 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: rgba(255, 255, 255, 0.87);
+  color-scheme: light dark;
+  /* font-size */
+  --f-size-xs : .7rem;
+  --f-size-sm : 1rem;
+  --f-size-lg : 1.5rem;
+  /* spacing  */
+  --spacing-xs : 1rem;
+  --spacing-sm : 1.5rem;
+  --spacing-lg : 2.5rem;
+  
+  /* backgrond */
+  --bg-primary : #3C3D37;
+  --bg-secondary : #697565;
+  --bg-card : #082227;
+  
+  /* color */
+  --color-primary: #ffffffde;
+  --color-secondary: #9ed64f;
+  --color-griss: #3b3b3b;
+  /* link */
+  --link-primary : #006A67;
+
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+img {
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
