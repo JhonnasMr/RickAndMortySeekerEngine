@@ -1,6 +1,7 @@
 #root {
     width: 100vw;
-    background: var(--bg-secondary);
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(30,66,167,0.8743872549019608) 100%);
 }
 
 main {

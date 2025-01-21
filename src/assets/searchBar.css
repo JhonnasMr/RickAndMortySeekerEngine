@@ -9,17 +9,18 @@
 }
 .input-container {
     position: relative;
-    width: clamp(200px, 100%, 250px);
+    width: clamp(200px, 100%, 300px);
   }
   
   .input {
     padding: 10px;
     height: 40px;
-    width: clamp(100%, 100%, 200px);
+    width: 100%;
     border: 2px solid var(--color-secondary);
     border-top: none;
     font-size: 16px;
-    background: url('./wallPaper1.jpg');
+    background: #00000069;
+    background: url('/wallPaper1.jpg');
     background-size: 150%;
     outline: none;
     box-shadow: 7px 7px 0px 0px var(--color-secondary);
@@ -43,6 +44,70 @@
     top: 0;
     transition: all 0.5s;
   }
+
+  .search-button {
+    position: absolute;
+    padding-right: 10px;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    height: 100%;
+    right: 0px;
+    border: 2px 0px solid var(--color-secondary);
+    background-color: transparent;
+    &:hover {
+      transform: scale(1.1);
+      transition: transform .4s;
+    }
+  }
+
+  
+
+  .filter {
+    /* position: absolute; */
+    right: 40px;
+    height: fit-content;
+    width: fit-content;
+    text-align: center;
+    z-index: 1;
+    /* transform: scale(1.2); */
+    align-self: center;
+    justify-self: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: red; */
+
+    .options__list {
+      .option__list {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
+        font-size: var(--f-size-xs);
+      }
+    }
+    
+    .filter-summary {
+      list-style: none;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .filter-button {
+        position: absolute;
+        border: 2px 0px solid var(--color-secondary);
+        background-color: transparent;
+        &:hover {
+          transform: scale(1.3);
+          transition: transform .4s;
+        }
+      }
+
+    }
+  }
+
 
   @media (width >= 768px) {
     .searchBar {

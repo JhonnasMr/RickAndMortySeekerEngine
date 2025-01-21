@@ -14,7 +14,7 @@
   /* backgrond */
   --bg-primary : #3C3D37;
   --bg-secondary : #697565;
-  --bg-card : #082227;
+  --bg-card : #00000069;;
   
   /* color */
   --color-primary: #ffffffde;
@@ -23,6 +23,10 @@
   /* link */
   --link-primary : #006A67;
 
+}
+
+body {
+  background-color: #000;
 }
 
 *, *::after, *::before {

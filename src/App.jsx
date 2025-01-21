@@ -8,23 +8,23 @@ import SearchBar from './components/searchBar'
 import Residents from './components/residents'
 import Loader from './components/loader'
 import Alert from './components/alert'
-import poster from '../public/Rick_and_Morty.svg'
-import video_background from '../public/space_backgrround.mp4'
+import poster from './assets/Rick_and_Morty.svg'
+import video_background from './assets/video/space_backgrround.mp4'
 
 function App() {
 
-  const [searchData, setSearchData] = useState([])
-  const [inputText, setInputText] = useState(null)
+  const [inputText, setInputText] = useState(false)
+  const [status, setStatus] = useState(false)
+  const [gender, setGender] = useState(false)
 
   const getRandomNumber = () => {
-    return Math.floor(Math.random() * (126 - 1 + 1)) + 1;
+    return String(Math.floor(Math.random() * (126 - 1 + 1)) + 1);
   }
 
   const locationUrl = 'https://rickandmortyapi.com/api/location/'
   let {data, isLoading, error, getData} = useFetchApi(locationUrl, inputText ? inputText : getRandomNumber())
 
   useEffect(() => {
-    setSearchData([])
     getData(locationUrl, inputText)
   },[inputText])
 
@@ -46,7 +46,7 @@ function App() {
       </header>
       <main className='container-grid'>
 
-        <SearchBar setInputText={setInputText}/>
+        <SearchBar setInputText={setInputText} setStatus={setStatus} setGender={setGender}/>
 
         {error && 
         <Alert tittle={'Error!'} color={'#e19d2c'}>
@@ -68,8 +68,6 @@ function App() {
           <Loader/>
         }
         {isLoading && <Loader/>}
-
-        
       </main>
       <footer className='container-flex'>
         <Footer/>

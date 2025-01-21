@@ -3,10 +3,11 @@
     width: 300px;
     border-radius: 15px 0;
     border-style: ridge;
+    border-color: var(--color-secondary);
     padding: var(--spacing-sm);
     margin: var(--spacing-sm) 0;
-    background: var(--bg-primary);
-    box-shadow: 8px 4px 39px -7px rgba(0, 0, 0, 0.97);
+    background: #00000069;
+    user-select: none;
     .location-tittle {
         text-align: center;
         color: var(--color-secondary);
